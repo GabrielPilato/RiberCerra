@@ -1,0 +1,38 @@
+name: riber_cerra
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  image_picker: ^0.8.4+4
+  uuid: ^3.0.5
+  flutter_slidable: ^3.0.0
+  cloud_firestore: ^4.7.1
+  device_preview: ^1.1.0
+  easy_splash_screen: ^1.0.4
+  firebase_auth: ^4.6.2
+  firebase_core: ^2.13.1
+  flutter:
+    sdk: flutter
+  firebase_storage: ^11.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  assets:
+    - lib/images/
+
+  uses-material-design: true
+  fonts: 
+    - family: Inder
+      fonts: 
+        - asset: lib/fonts/Inder-Regular.ttf
+    - family: EB Garamond
+      fonts:
+        - asset: lib/fonts/EBGaramond-VariableFont_wght.ttf
