@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import, prefer_const_constructors, prefer_typing_uninitialized_variables
+// ignore_for_file: unused_import, prefer_const_constructors, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:riber_cerra/controller/plantas_controller.dart';
@@ -130,6 +130,20 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                           width: 3),
                       minimumSize: Size(140, 140)),
                 ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text('usuário',
+                    style: TextStyle(fontSize: 18, fontFamily: 'Inder')),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text('pesquisador',
+                    style: TextStyle(fontSize: 18, fontFamily: 'Inder')),
               ),
             ],
           ),

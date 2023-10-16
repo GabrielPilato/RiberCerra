@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +21,6 @@ Future<void> main() async {
   );
   runApp(DevicePreview(
     builder: (context) => MaterialApp(
-
         useInheritedMediaQuery: true,
         debugShowCheckedModeBanner: false,
         title: 'RiberCerra',
