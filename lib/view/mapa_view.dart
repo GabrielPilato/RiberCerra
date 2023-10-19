@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
-
+import 'package:flutter_map/flutter_map.dart';
 import '../model/drawer.dart';
+import 'package:latlong2/latlong.dart' as latLng;
 
 class TelaMapaView extends StatefulWidget {
   const TelaMapaView({super.key});
@@ -39,10 +40,21 @@ class _TelaMapaViewState extends State<TelaMapaView> {
           )
         ],
       ),
-      body: Image.asset(
-        'lib/images/MapaPrincipal.png',
-        fit: BoxFit.fill,
-        height: double.infinity,
+      body: Stack(
+        children: [
+          FlutterMap(
+            options: MapOptions(
+              center: latLng.LatLng(51.509364, -0.128928),
+              zoom: 3.2,
+            ),
+            children: [
+              TileLayer(
+                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                userAgentPackageName: 'com.example.app',
+              ),
+            ],
+          ),
+        ],
       ),
       drawer: CreateDrawer().drawer(context),
     );
