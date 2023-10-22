@@ -7,6 +7,7 @@ class Planta {
   final DateTime dataCadastro;
   final DateTime dataAtualizacao;
   final String sobre;
+
   Planta(this.nome, this.nomeCientifico, this.pid, this.dataCadastro,
       this.dataAtualizacao, this.sobre);
 

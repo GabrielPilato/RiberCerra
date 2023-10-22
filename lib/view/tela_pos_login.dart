@@ -3,6 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:riber_cerra/model/drawer.dart';
+import 'package:riber_cerra/view/mapa_view.dart' show TelaMapaView;
 
 class TelaPosLogin extends StatefulWidget {
   const TelaPosLogin({super.key});
@@ -49,12 +50,11 @@ class _TelaPosLoginState extends State<TelaPosLogin> {
             margin: EdgeInsets.fromLTRB(22, 5, 22, 0),
             height: MediaQuery.of(context).size.height * 0.44,
             decoration: BoxDecoration(
-                border: Border.all(
-                    width: 3, color: Color.fromARGB(255, 197, 150, 80)),
-                borderRadius: BorderRadius.circular(6),
-                image: DecorationImage(
-                    image: ExactAssetImage("lib/images/a.png"),
-                    fit: BoxFit.fill)),
+              border: Border.all(
+                  width: 3, color: Color.fromARGB(255, 197, 150, 80)),
+              borderRadius: BorderRadius.circular(6),
+            ),
+            child: TelaMapaView(),
           ),
           Container(
             child: Column(
