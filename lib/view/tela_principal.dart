@@ -133,20 +133,6 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               ),
             ],
           ),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Text('usuário',
-                    style: TextStyle(fontSize: 18, fontFamily: 'Inder')),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Text('pesquisador',
-                    style: TextStyle(fontSize: 18, fontFamily: 'Inder')),
-              ),
-            ],
-          ),
           Padding(
               padding: EdgeInsets.fromLTRB(25, 25, 25, 10),
               child: Text(
