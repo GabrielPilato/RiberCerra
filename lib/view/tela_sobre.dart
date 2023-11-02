@@ -82,6 +82,16 @@ class TelaSobreView extends StatelessWidget {
                 fontSize: 30,
                 fontFamily: 'Inder',
               )),
+          Container(
+              margin: EdgeInsets.fromLTRB(10, 8, 10, 8),
+              child: Text(
+                'Texto placeholder explicando o aplicativo e meios de contato para esclarecimento de dúvidas.',
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'Inder',
+                ),
+              )),
         ],
       ),
       drawer: CreateDrawer().drawer(context),

@@ -3,7 +3,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:riber_cerra/model/drawer.dart';
-import 'package:riber_cerra/view/mapa_view.dart' show TelaMapaView;
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong2/latlong.dart' as latLng;
 
 class TelaPosLogin extends StatefulWidget {
   const TelaPosLogin({super.key});
@@ -54,7 +55,40 @@ class _TelaPosLoginState extends State<TelaPosLogin> {
                   width: 3, color: Color.fromARGB(255, 197, 150, 80)),
               borderRadius: BorderRadius.circular(6),
             ),
-            child: TelaMapaView(),
+            child: Scaffold(
+              body: Stack(
+                children: [
+                  FlutterMap(
+                    options: MapOptions(
+                      initialCenter: latLng.LatLng(-21.1767, -47.8208),
+                      initialZoom: 8.8,
+                    ),
+                    children: [
+                      TileLayer(
+                        urlTemplate:
+                            'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                        userAgentPackageName: 'com.example.app',
+                      ),
+                    ],
+                  ),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: FloatingActionButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'mapa');
+                      },
+                      shape: RoundedRectangleBorder(
+                          side: BorderSide(width: 3.5, color: Colors.white),
+                          borderRadius: BorderRadius.circular(100)),
+                      child: Icon(
+                        Icons.photo_camera,
+                      ),
+                      backgroundColor: Color.fromARGB(255, 172, 83, 11),
+                    ),
+                  )
+                ],
+              ),
+            ),
           ),
           Container(
             child: Column(
