@@ -243,19 +243,23 @@ class _TelaEnciclopediaViewState extends State<TelaEnciclopediaView> {
                   backgroundColor: Color.fromARGB(255, 54, 179, 118)),
               child: Text("salvar"),
               onPressed: () {
-                
-                var uuid = Uuid();
-                String pid = uuid.v1();
-                var p = Planta(txtNome.text, txtNomeCientifico.text, pid,
-                    DateTime.now(), DateTime.now(), txtSobre.text);
-                if (docId == null) {
-                  PlantaController().adicionar(context, p);
+                if (txtNome.text.isEmpty ||
+                    txtNomeCientifico.text.isEmpty ||
+                    txtSobre.text.isEmpty) {
                 } else {
-                  PlantaController().atualizar(context, docId, p);
+                  var uuid = Uuid();
+                  String pid = uuid.v1();
+                  var p = Planta(txtNome.text, txtNomeCientifico.text, pid,
+                      DateTime.now(), DateTime.now(), txtSobre.text);
+                  if (docId == null) {
+                    PlantaController().adicionar(context, p);
+                  } else {
+                    PlantaController().atualizar(context, docId, p);
+                  }
+                  txtNome.clear();
+                  txtNomeCientifico.clear();
+                  txtSobre.clear();
                 }
-                txtNome.clear();
-                txtNomeCientifico.clear();
-                txtSobre.clear();
               },
             ),
           ],

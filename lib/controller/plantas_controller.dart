@@ -51,7 +51,7 @@ class PlantaController {
     return FirebaseFirestore.instance.collection('plantas');
   }
 
-  listarPlanta(pid) {
+  listarPlanta(pid) { 
     return FirebaseFirestore.instance
         .collection('plantas')
         .where('pid', isEqualTo: pid)
