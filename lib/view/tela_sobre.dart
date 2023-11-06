@@ -85,8 +85,8 @@ class TelaSobreView extends StatelessWidget {
           Container(
               margin: EdgeInsets.fromLTRB(10, 8, 10, 8),
               child: Text(
-                'Texto placeholder explicando o aplicativo e meios de contato para esclarecimento de dúvidas.',
-                textAlign: TextAlign.justify,
+                'Bem Vindo ao RiberCerra!\n Este é um pojeto open-source realizado por 2 estudantes da FATEC - Ribeirão Preto, a aplicação se encontra em constante desenvolvimento e ainda temos muitas ideias para implementar!\n\nIntegrantes: \n Gabriel Leandro de Araujo Pilato\n\nAna Carolina da Silva Gomes',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
                   fontFamily: 'Inder',

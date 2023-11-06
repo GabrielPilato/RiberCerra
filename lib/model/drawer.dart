@@ -155,6 +155,8 @@ class CreateDrawer {
                   context as BuildContext,
                   MaterialPageRoute(builder: (context) => TelaPrincipal()),
                   (Route<dynamic> route) => false);
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text('Logout realizado com sucesso!')));
             },
           ),
         ],
